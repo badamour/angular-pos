@@ -1,0 +1,64 @@
+<div id="customerDiv" role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 bg-light" style="margin-top: 56px">
+
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Customers</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <form (ngSubmit)="saveCustomer()" #frmCustomer="ngForm">
+        <p>
+          <button class="btn btn-success" type="reset" (click)="newCustomer()">+ New Customer</button>
+        </p>
+        <p class="form-group">
+          <label>Customer ID</label>
+          <input #txtId name="txtId" [(ngModel)]="selectedCustomer.id" class="form-control" type="text" required
+                 pattern="^C\d{3}$">
+        </p>
+        <p class="form-group">
+          <label>Customer Name</label>
+          <input name="txtName" class="form-control" type="text" [(ngModel)]="selectedCustomer.name" required
+                 pattern="\w{4}.+">
+        </p>
+        <p class="form-group">
+          <label>Customer Address</label>
+          <input name="txtAddress" class="form-control" type="text" [(ngModel)]="selectedCustomer.address" required
+                 pattern="\w{4}.+">
+        </p>
+        <p class="form-group">
+          <label>Customer Salary</label>
+          <input name="txtSalary" class="form-control" type="text" [(ngModel)]="selectedCustomer.salary" required
+                 pattern="^[0-9]+(\.[0-9]{1,2})?$">
+        </p>
+        <p>
+          <button type="submit" class="btn btn-primary"
+                  style="width: 50%;margin-left: 25%;font-weight: bold;margin-top: 5%">Save
+          </button>
+        </p>
+      </form>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of customers" (click)="tableRow_Click(customer)">
+          <td>{{customer.id}}</td>
+          <td>{{customer.name}}</td>
+          <td>{{customer.address}}</td>
+          <td>{{customer.salary}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+

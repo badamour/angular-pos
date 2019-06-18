@@ -1,0 +1,59 @@
+<main id="itemDiv" role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 bg-light" style="margin-top: 56px">
+
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Items</h1>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <form (ngSubmit)="saveItem()" #frmItem="ngForm">
+        <p>
+          <button class="btn btn-success" type="reset" (click)="newItem()">+ New Item</button>
+        </p>
+        <p class="form-group">
+          <label>Code</label>
+          <input #txtId name="txtId" [(ngModel)]="selectedItem.code" class="form-control" type="text" required
+                 pattern="^P\d{3}$">
+        </p>
+        <p class="form-group">
+          <label>Description</label>
+          <input name="txtDescription" class="form-control" type="text" [(ngModel)]="selectedItem.description" required
+                 pattern="\w{4}.+">
+        </p>
+        <p class="form-group">
+          <label>Unit Price</label>
+          <input name="txtPrice" class="form-control" type="number" [(ngModel)]="selectedItem.unitPrice" required
+                 pattern="^[0-9]+(\.[0-9]{1,2})?$">
+        </p>
+        <p class="form-group">
+          <label>Qty On Hand</label>
+          <input name="txtqtyOnHand" class="form-control" type="number" [(ngModel)]="selectedItem.qtyOnHand" required
+                 pattern="">
+        </p>
+        <p>
+          <button type="submit" class="btn btn-primary"
+                  style="width: 50%;margin-left: 25%;font-weight: bold;margin-top: 5%">Save
+          </button>
+        </p>
+      </form>
+    </div>
+
+    <div class="col-12 col-md-8">
+      <table class="table table-hover table-bordered">
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Unit Price</th>
+          <th>Qty. on Hand</th>
+        </tr>
+        <tr *ngFor="let item of items">
+          <td>{{item.code}}</td>
+          <td>{{item.description | uppercase}}</td>
+          <td>{{item.unitPrice | number:'1.2-2'}}</td>
+          <td>{{item.qtyOnHand}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

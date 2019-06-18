@@ -1,0 +1,68 @@
+<nav class=" navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+  <a class="navbar-brand" style="margin-left:4%;font-size: 130%" id="mc" href="#">Ch@mo Point Of Sales System</a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 50%">
+    <ul class="navbar-nav">
+      <li id="home" class="nav-item active">
+        <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li id="NOrder" class="nav-item">
+        <a class="nav-link">Order</a>
+      </li>
+      <li id="Nitem" class="nav-item">
+        <a class="nav-link ">Item</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Other
+        </a>
+        <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdownMenuLink">
+          <a id="c" class="dropdown-item">Customers</a>
+          <!--<a id="E" class="dropdown-item">Employee</a>-->
+          <!--<a class="dropdown-item" href="#">Setting</a>-->
+          <!--<a class="dropdown-item" href="#">about</a>-->
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="row">
+  <nav class="col-md-2 d-none d-md-block bg-dark sidebar " style="margin-top: 61px;position: fixed">
+
+    <section id="navigation">
+      <section id="profile">
+        <img src="../../../assets/logo.png" width="60%">
+        <aside>Chamod Supunsara</aside>
+        <label>Ch@mo Products</label>
+        <label></label>
+        <label style="font-size: 90%;margin-bottom: 10%">IJSE-Institute of java and Software Engineering</label>
+        <hr class="bg-white">
+      </section>
+    </section>
+
+    <div class="sidebar-sticky">
+
+      <ul class="nav flex-column">
+        <li id="index"><a routerLink="/dashboard" routerLinkActive="active" href="#"><i
+          class="fas fa-tachometer-alt"></i>Home</a></li>
+        <li id="customer"><a routerLink="/customers" routerLinkActive="active" href="#"><i class="fas fa-users"></i>Customers</a>
+        </li>
+        <li id="item"><a routerLink="/items" routerLinkActive="active" href="#"><i class="fas fa-cubes"></i>Items</a>
+        </li>
+        <li id="order"><a routerLink="/orders" routerLinkActive="active" href="#"><i class="fas fa-shopping-cart"></i>Orders</a>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+    </div>
+  </nav>
+
+</div>

@@ -1,0 +1,156 @@
+<main id="orderDiv" role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 bg-light"
+      style="margin-top: 56px">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Order</h1>
+
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6">
+
+        <div class="card text-white bg-light mb-5 rounded" style="max-width: 25rem;">
+          <div class="card-header bg-info">Customer Details</div>
+          <div class="card-body">
+            <form>
+
+              <label class="lbl" style="margin-right: 2%">Customer</label>
+
+              <select class="styleSelect" id="cmbCustomer" style="margin-right: 5%">
+                <option>Select Customer</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Submit</button>
+
+
+              <div class="form-group">
+                <label class="lbl" style="margin-top: 5%">Address</label>
+                <input type="email" id="txtAdd" class="form-control"
+                       aria-describedby="emailHelp">
+              </div>
+
+              <div class="form-group">
+                <label class="lbl">Telephone</label>
+                <input type="email" id="txttp" class="form-control"
+                       aria-describedby="emailHelp">
+              </div>
+
+              <div class="form-group">
+                <label class="lbl">Salary</label>
+                <input type="email" id="txtsal" class="form-control"
+                       aria-describedby="emailHelp">
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-xl-6">
+
+        <div class="card text-white bg-light mb-5 rounded" style="max-width: 25rem;">
+          <div class="card-header bg-info">Item Select</div>
+          <div class="card-body">
+            <form>
+
+              <label class="lbl">Item</label>
+              <select class="styleSelect" id="cmbItem" style="width: 100%">
+                <option>Select Item</option>
+              </select>
+
+              <div class="form-group">
+                <label class="lbl" style="margin-top: 5%">Price</label>
+                <input id="txtprice" type="email" class="form-control"
+                       aria-describedby="emailHelp">
+              </div>
+
+              <div class="form-group">
+                <label class="lbl">QTY</label>
+                <input id="txtQTY" type="email" class="form-control"
+                       aria-describedby="emailHelp">
+              </div>
+
+              <hr>
+              <label id="lbl">Order Item</label>
+              <hr>
+
+              <div class="form-group">
+                <label class="lbl">Order QTY</label>
+                <input id="txtOQTY" type="email" class="form-control"
+                       aria-describedby="emailHelp">
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-xl-6">
+
+        <div class="card text-white bg-light mb-5 rounded" style="max-width: 25rem;">
+          <div class="card-header bg-info">Invoice Detail</div>
+          <div class="card-body">
+            <form>
+
+              <div class="form-group">
+                <label class="lbl">Customer</label>
+                <input id="txtcName" type="email" class="form-control"
+                       aria-describedby="emailHelp">
+              </div>
+
+              <div class="form-group">
+                <label class="lbl" style="margin-right: 7%;margin-left: 20%">Date</label>
+                <input type="date" class="styleDate">
+              </div>
+
+              <div class="form-group">
+                <label class="lbl">Order ID</label>
+                <input id="txtOrderID" type="email" class="form-control" aria-describedby="emailHelp">
+              </div>
+              <div style="text-align: center">
+                <button id="orderdt" type="button" class="btn btn-success">Submit Order</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="tbl">
+
+    <table class="table table-bordered">
+      <thead class="bg-info">
+      <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Item</th>
+        <th>Order QTY</th>
+        <th>Amount</th>
+      </tr>
+
+
+      </thead>
+      <tbody id="tblOrder">
+
+      </tbody>
+    </table>
+
+    <br>
+    <section class="content-box-2">
+      <span id="total-text">Total :-  Rs : 00.0 /=</span>
+      <br><br>
+    </section>
+    <section id="order-last-buttons" style="margin-bottom: 10%">
+      <button type="button" class="btn btn-primary" style="padding: 2%;width: 20%">Renew Order</button>
+    </section>
+
+  </div>
+</main>
+
