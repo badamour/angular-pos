@@ -21,4 +21,8 @@ export class CustomerService {
   saveCustomer(customer: Customer): Observable<boolean> {
     return this.http.post<boolean>(this.baseUrl, customer);
   }
+
+  deleteCustomer(customer: Customer): Observable<boolean> {
+    return this.http.post<boolean>(this.baseUrl, customer);
+  }
 }
