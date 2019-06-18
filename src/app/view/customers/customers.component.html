@@ -1,4 +1,4 @@
-<div id="customerDiv" role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 bg-light" style="margin-top: 56px">
+<div id="customerDiv" role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 bg-light" style="margin-top: 56px;">
 
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Customers</h1>
@@ -30,9 +30,13 @@
           <input name="txtSalary" class="form-control" type="text" [(ngModel)]="selectedCustomer.salary" required
                  pattern="^[0-9]+(\.[0-9]{1,2})?$">
         </p>
-        <p>
+        <p class="row">
           <button type="submit" class="btn btn-primary"
-                  style="width: 50%;margin-left: 25%;font-weight: bold;margin-top: 5%">Save
+                  style="width: 20%;margin-left: 25%;font-weight: bold;margin-top: 5%">Save
+          </button>
+
+          <button type="submit" class="btn btn-danger"
+                  style="position: absolute;width: 20%;margin-left: 50%;font-weight: bold;margin-top: 5%">Delete
           </button>
         </p>
       </form>
