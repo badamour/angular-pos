@@ -102,7 +102,7 @@
   border: solid;
   border-radius: 7px;
   background-color: white;
-  border-color: #4F97A3;
+  border-color: #0C8A44;
   margin-left: 5vw;
   margin-top: 1vh;
 
@@ -112,7 +112,7 @@
   width: 13.5vw;
   height: 5vh;
   position: relative;
-  background-color: #4F97A3;
+  background-color: #0C8A44;
   margin-top: 0px;
   border-radius: 7px;
   margin-left: -3px;
@@ -130,16 +130,17 @@
 
 .detail {
 
-  font-size: 2vw;
-  color: #4c4cff;
+  font-size: 1.7vw;
+  color: #0C8A44;
   margin-top: 15vh;
   margin-left: 5vw;
+  font-weight: bold;
 }
 
 .Squreimage {
 
   width: 5vw;
-  height: 6vh;
+  height: 10vh;
   position: absolute;
   margin-left: 4vw;
   margin-top: 5vh;

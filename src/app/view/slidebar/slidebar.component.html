@@ -1,6 +1,7 @@
 <nav class=" navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-  <a class="navbar-brand" style="font-size: 130%;font-weight: bold" id="mc" href="#">Ch@mo Point Of Sales System |
-    2019</a>
+  <a class="navbar-brand" style="font-size: 130%;font-weight: bold" id="mc" href="#">Ch@mo Point Of Sales System</a>
+  <a class="navbar-brand" style="font-size: 130%;font-weight: bold;color: white" href="#"> | </a>
+  <a class="navbar-brand" style="font-size: 130%;font-weight: bold;color: #0C8A44" href="#">2019</a>
   <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,9 +24,9 @@
         </a>
         <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdownMenuLink">
           <a id="c" class="dropdown-item">Customers</a>
-          <!--<a id="E" class="dropdown-item">Employee</a>-->
-          <!--<a class="dropdown-item" href="#">Setting</a>-->
-          <!--<a class="dropdown-item" href="#">about</a>-->
+          <a id="E" class="dropdown-item">Employee</a>
+          <a class="dropdown-item" href="#">Setting</a>
+          <a class="dropdown-item" href="#">about</a>
         </div>
       </li>
     </ul>
@@ -39,7 +40,7 @@
     <section id="navigation">
       <section id="profile">
         <img src="../../../assets/logo.png" width="60%">
-        <aside>Chamod Supunsara</aside>
+        <aside style="color: #0C8A44">Chamod Supunsara</aside>
         <label>Ch@mo Products</label>
         <label></label>
         <label style="font-size: 90%;margin-bottom: 10%">IJSE-Institute of java and Software Engineering</label>
@@ -49,14 +50,17 @@
 
     <div class="sidebar-sticky">
 
-      <ul class="nav flex-column">
-        <li id="index"><a routerLink="/dashboard" routerLinkActive="active" href="#"><i
-          class="fas fa-tachometer-alt"></i>Home</a></li>
-        <li id="customer"><a routerLink="/customers" routerLinkActive="active" href="#"><i class="fas fa-users"></i>Customers</a>
+      <ul class="nav flex-column" style="font-weight: bold">
+        <li id="index"><a routerLink="/dashboard" routerLinkActive="active" href="#" style="color: white"><i
+          class="fas fa-tachometer-alt" style="color: #0C8A44"></i>Home</a></li>
+        <li id="customer"><a routerLink="/customers" routerLinkActive="active" href="#" style="color: white"><i
+          class="fas fa-users" style="color: #0C8A44"></i>Customers</a>
         </li>
-        <li id="item"><a routerLink="/items" routerLinkActive="active" href="#"><i class="fas fa-cubes"></i>Items</a>
+        <li id="item"><a routerLink="/items" routerLinkActive="active" href="#" style="color: white"><i
+          class="fas fa-cubes" style="color: #0C8A44"></i>Items</a>
         </li>
-        <li id="order"><a routerLink="/orders" routerLinkActive="active" href="#"><i class="fas fa-shopping-cart"></i>Orders</a>
+        <li id="order"><a routerLink="/orders" routerLinkActive="active" href="#" style="color: white"><i
+          class="fas fa-shopping-cart" style="color: #0C8A44"></i>Orders</a>
         </li>
         <li></li>
         <li></li>
