@@ -11,6 +11,7 @@ import {CustomerService} from '../../service/customer.service';
 export class CustomersComponent implements OnInit {
 
   customers: Customer[] = [];
+  newcustomerid;
   selectedCustomer: Customer = new Customer('', '', '', 0);
   @ViewChild('txtId') txtId: ElementRef;
   @ViewChild('frmCustomer') frmCustomer: NgForm;
@@ -21,6 +22,7 @@ export class CustomersComponent implements OnInit {
   ngOnInit() {
     this.customerService.getAllCustomers().subscribe(customers => {
       this.customers = customers;
+      console.log(this.customers);
     });
   }
 
@@ -38,15 +40,29 @@ export class CustomersComponent implements OnInit {
       this.customerService.saveCustomer(this.selectedCustomer)
         .subscribe(resp => {
           if (resp) {
-            alert('Customer has been saved successfully');
+            alert('Failed to save the customer');
             this.customers.push(this.selectedCustomer);
           } else {
-            alert('Failed to save the customer');
+            alert('Customer has been saved successfully');
           }
         });
 
     } else {
       alert('Invalid Data, Please Correct...!');
     }
+  }
+
+  deleteData(temp) {
+    const index = this.customers.indexOf(temp);
+    this.customers.splice(index, 1);
+    this.customerService.daleteCustomer(temp.cusid).subscribe(result => {
+      if (result === null) {
+        alert('Customer Deleted');
+        this.customerService.getAllCustomers().subscribe(customers => {
+          this.customers = customers;
+        });
+
+      }
+    });
   }
 }

@@ -9,7 +9,7 @@ import {environment} from '../../environments/environment';
 })
 export class CustomerService {
 
-  readonly baseUrl = environment.apiUrl + '/customers';
+  readonly baseUrl = environment.apiUrl + '/customerServelt';
 
   constructor(private http: HttpClient) {
   }
@@ -22,7 +22,7 @@ export class CustomerService {
     return this.http.post<boolean>(this.baseUrl, customer);
   }
 
-  deleteCustomer(customer: Customer): Observable<boolean> {
-    return this.http.post<boolean>(this.baseUrl, customer);
+  daleteCustomer(id: string) {
+    return this.http.delete(this.baseUrl + '?customerid=' + id);
   }
 }

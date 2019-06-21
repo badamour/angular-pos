@@ -2,7 +2,6 @@
       style="margin-top: 56px">
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Order</h1>
-
   </div>
 
 
@@ -22,16 +21,15 @@
               </select>
               <button type="submit" class="btn btn-primary">Submit</button>
 
-
               <div class="form-group">
-                <label class="lbl" style="margin-top: 5%">Address</label>
-                <input type="email" id="txtAdd" class="form-control"
+                <label class="lbl">Name</label>
+                <input type="email" id="txtname" class="form-control"
                        aria-describedby="emailHelp">
               </div>
 
               <div class="form-group">
-                <label class="lbl">Telephone</label>
-                <input type="email" id="txttp" class="form-control"
+                <label class="lbl" style="margin-top: 5%">Address</label>
+                <input type="email" id="txtAdd" class="form-control"
                        aria-describedby="emailHelp">
               </div>
 
@@ -81,7 +79,6 @@
                 <input id="txtOQTY" type="email" class="form-control"
                        aria-describedby="emailHelp">
               </div>
-
             </form>
           </div>
 
@@ -125,24 +122,6 @@
 
   <div id="tbl">
 
-    <table class="table table-bordered">
-      <thead style="background-color: #0C8A44;color: white">
-      <tr>
-        <th>Order ID</th>
-        <th>Customer</th>
-        <th>Item</th>
-        <th>Order QTY</th>
-        <th>Amount</th>
-      </tr>
-
-
-      </thead>
-      <tbody id="tblOrder">
-
-      </tbody>
-    </table>
-
-    <br>
     <section class="content-box-2">
       <span id="total-text">Total :-  Rs : 00.0 /=</span>
       <br><br>
@@ -151,6 +130,29 @@
       <button type="button" class="btn btn-primary" style="padding: 2%;width: 20%;font-weight: bold">Renew Order
       </button>
     </section>
+
+    <br>
+
+    <table class="table table-bordered">
+      <thead style="background-color: #0C8A44;color: white">
+      <tr>
+        <th>Order ID</th>
+        <th>Customer Id</th>
+        <th>Order Date</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngFor="let order of orders">
+        <td>{{order.orderid | uppercase}}</td>
+        <td>{{order.customerid | uppercase}}</td>
+        <td>{{order.orderdate}}</td>
+        <td>{{order.price | number:'1.2-2'}}</td>
+      </tr>
+
+      </thead>
+      <tbody id="tblOrder">
+
+      </tbody>
+    </table>
 
   </div>
 </main>

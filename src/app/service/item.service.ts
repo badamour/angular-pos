@@ -9,13 +9,13 @@ import {environment} from '../../environments/environment';
 })
 export class ItemService {
 
-  readonly baseUrl = environment.apiUrl + '/items';
+  readonly baseUrl = environment.apiUrl + '/Item';
 
   constructor(private http: HttpClient) {
   }
 
   getAllItems(): Observable<Item[]> {
-    return this.http.get<Item[]>('http://localhost:8080/auth/items');
+    return this.http.get<Item[]>(this.baseUrl);
   }
 
   saveItem(item: Item): Observable<boolean> {

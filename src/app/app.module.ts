@@ -9,6 +9,11 @@ import {OrdersComponent} from './view/orders/orders.component';
 import {SlidebarComponent} from './view/slidebar/slidebar.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {CustomerService} from './service/customer.service';
+import {ItemService} from './service/item.service';
+import {OrderService} from './service/order.service';
+import {OrderDetailService} from './service/orderDetail.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +27,15 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CustomerService,
+    ItemService,
+    OrderService,
+    OrderDetailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

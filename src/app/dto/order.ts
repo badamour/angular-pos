@@ -1,4 +1,4 @@
 export class Order {
-  constructor(public id: string, public date: string, public cusid: string) {
+  constructor(public orderid: string, public customerid: string, public orderdate: string, public price: number) {
   }
 }

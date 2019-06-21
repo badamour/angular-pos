@@ -37,10 +37,10 @@ export class ItemsComponent implements OnInit {
       this.itemService.saveItem(this.selectedItem)
         .subscribe(resp => {
           if (resp) {
-            alert('Item has been saved successfully');
+            alert('Failed to save the item');
             this.items.push(this.selectedItem);
           } else {
-            alert('Failed to save the item');
+            alert('Item has been saved successfully');
           }
         });
 
